@@ -14,21 +14,16 @@
   </div>
 </template>
 <script>
+import axios from "axios";
 export default {
-  asyncData(context, callback) {
-    setTimeout(() => {
-      callback(null, {
-        loadedPost: {
-          id : "1",
-          author: "Artur Dent",
-          updatedDate: new Date(),
-          content: "This is actually just some dummy text",
-          thumbnail : "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSqNkuYnGR1Iez9fU4pcX3kt7gqDBJpjjZlz5FQVcBC3uOKOuDh",
-          title : "My first Post (ID: " + context.route.params.id + ")",
-          previewText : "This is my first Post in the list",
-        }
-      });
-    }, 1000);
+  asyncData(context) {
+      return axios.get("https://nxt-blog.firebaseio.com/posts/" + context.params.id + ".json")
+      .then(res => {
+          return {
+            loadedPost: res.data
+          }
+      })
+      .catch(e => context.error(e))
   }
 }
 </script>

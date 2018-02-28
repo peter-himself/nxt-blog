@@ -9,16 +9,26 @@
 </template>
 <script>
 import PostList from "@/components/Posts/PostList"
+export default {
+  components: {
+      PostList
+  },
+
+  computed: {
+    loadedPosts() {
+      return this.$store.getters.loadedPosts
+    }
+  }
+}
+</script>
+<!--<script>
+import PostList from "@/components/Posts/PostList"
 
 export default {
   components: {
     PostList
   }, 
-  // data() {
-  //   return {
-  //     loadedPosts: []
-  //   }
-  // }, 
+
   asyncData(context, callback) {
     console.log("asyncData executed")
      setTimeout(() => {
@@ -45,7 +55,7 @@ export default {
 
   }
 }
-</script>
+</script>-->
 
 <style scoped>
   .intro {
