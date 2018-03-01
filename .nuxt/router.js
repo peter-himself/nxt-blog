@@ -3,14 +3,14 @@ import Router from 'vue-router'
 
 Vue.use(Router)
 
-const _b607ab48 = () => import('../pages/posts/index.vue' /* webpackChunkName: "pages/posts/index" */).then(m => m.default || m)
-const _4f24f250 = () => import('../pages/admin/index.vue' /* webpackChunkName: "pages/admin/index" */).then(m => m.default || m)
-const _69301cd4 = () => import('../pages/about/index.vue' /* webpackChunkName: "pages/about/index" */).then(m => m.default || m)
-const _1561f9d6 = () => import('../pages/admin/auth/index.vue' /* webpackChunkName: "pages/admin/auth/index" */).then(m => m.default || m)
-const _14c17eda = () => import('../pages/admin/new-post/index.vue' /* webpackChunkName: "pages/admin/new-post/index" */).then(m => m.default || m)
-const _1a44a03a = () => import('../pages/admin/_postid/index.vue' /* webpackChunkName: "pages/admin/_postid/index" */).then(m => m.default || m)
-const _da7e9172 = () => import('../pages/posts/_id/index.vue' /* webpackChunkName: "pages/posts/_id/index" */).then(m => m.default || m)
-const _5eb9d018 = () => import('../pages/index.vue' /* webpackChunkName: "pages/index" */).then(m => m.default || m)
+const _128a7877 = () => import('../pages/posts/index.vue' /* webpackChunkName: "pages/posts/index" */).then(m => m.default || m)
+const _45fbd4f3 = () => import('../pages/admin/index.vue' /* webpackChunkName: "pages/admin/index" */).then(m => m.default || m)
+const _38f63fb1 = () => import('../pages/about/index.vue' /* webpackChunkName: "pages/about/index" */).then(m => m.default || m)
+const _18944dda = () => import('../pages/admin/auth/index.vue' /* webpackChunkName: "pages/admin/auth/index" */).then(m => m.default || m)
+const _2b29df1f = () => import('../pages/admin/new-post/index.vue' /* webpackChunkName: "pages/admin/new-post/index" */).then(m => m.default || m)
+const _6f75b2fe = () => import('../pages/admin/_postid/index.vue' /* webpackChunkName: "pages/admin/_postid/index" */).then(m => m.default || m)
+const _5417003c = () => import('../pages/posts/_id/index.vue' /* webpackChunkName: "pages/posts/_id/index" */).then(m => m.default || m)
+const _1f90e31a = () => import('../pages/index.vue' /* webpackChunkName: "pages/index" */).then(m => m.default || m)
 
 
 
@@ -61,42 +61,42 @@ export function createRouter () {
     routes: [
 		{
 			path: "/posts",
-			component: _b607ab48,
+			component: _128a7877,
 			name: "posts"
 		},
 		{
 			path: "/admin",
-			component: _4f24f250,
+			component: _45fbd4f3,
 			name: "admin"
 		},
 		{
 			path: "/about",
-			component: _69301cd4,
+			component: _38f63fb1,
 			name: "about"
 		},
 		{
 			path: "/admin/auth",
-			component: _1561f9d6,
+			component: _18944dda,
 			name: "admin-auth"
 		},
 		{
 			path: "/admin/new-post",
-			component: _14c17eda,
+			component: _2b29df1f,
 			name: "admin-new-post"
 		},
 		{
 			path: "/admin/:postid",
-			component: _1a44a03a,
+			component: _6f75b2fe,
 			name: "admin-postid"
 		},
 		{
 			path: "/posts/:id",
-			component: _da7e9172,
+			component: _5417003c,
 			name: "posts-id"
 		},
 		{
 			path: "/",
-			component: _5eb9d018,
+			component: _1f90e31a,
 			name: "index"
 		}
     ],
